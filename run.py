@@ -121,7 +121,7 @@ class Network(torch.nn.Module):
 
 		self.modulePad = torch.nn.ReplicationPad2d([ int(math.floor(51 / 2.0)), int(math.floor(51 / 2.0)), int(math.floor(51 / 2.0)), int(math.floor(51 / 2.0)) ])
 
-		self.load_state_dict(torch.load('./network-' + arguments_strModel + '.pytorch'))
+		self.load_state_dict(torch.load(arguments_strModel))
 	# end
 
 	def forward(self, tensorFirst, tensorSecond):
